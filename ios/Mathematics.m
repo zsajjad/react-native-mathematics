@@ -1,19 +1,9 @@
-#import "Mathematics.h"
+#import <React/RCTBridgeModule.h>
 
-@implementation Mathematics
+@interface RCT_EXTERN_MODULE(Mathematics, NSObject)
 
-RCT_EXPORT_MODULE()
-
-// Example method
-// See // https://reactnative.dev/docs/native-modules-ios
-RCT_REMAP_METHOD(multiply,
-                 multiplyWithA:(nonnull NSNumber*)a withB:(nonnull NSNumber*)b
+RCT_EXTERN_METHOD(calculate:(NSDictionary)formulae
                  withResolver:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
-{
-  NSNumber *result = @([a floatValue] * [b floatValue]);
-
-  resolve(result);
-}
 
 @end

@@ -1,7 +1,15 @@
 import { NativeModules } from 'react-native';
 
 type MathematicsType = {
-  multiply(a: number, b: number): Promise<number>;
+  calculate(
+    formulae: Record<
+      string,
+      {
+        formula: string;
+        values: Record<string, number>;
+      }
+    >
+  ): Promise<Record<string, number>>;
 };
 
 const { Mathematics } = NativeModules;
