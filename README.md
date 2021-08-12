@@ -1,11 +1,11 @@
-# react-native-mathematics
+# React Native Mathematics
 
-Running sophistacted mathematical calculations on native thread
+Running sophisticated mathematical calculations on native thread
 
 ## Installation
 
 ```sh
-npm install react-native-mathematics
+npm install react-native-mathematics # or yarn add react-native-mathematics
 ```
 
 ## Usage
@@ -15,7 +15,15 @@ import Mathematics from "react-native-mathematics";
 
 // ...
 
-const result = await Mathematics.multiply(3, 7);
+const result = await Mathematics.calculate({
+  addition: {
+    formula: "a+b",
+    values: {
+      a: 5,
+      b: 10
+    },
+  },
+});
 ```
 
 ## Contributing
